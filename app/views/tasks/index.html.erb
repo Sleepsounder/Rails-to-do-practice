@@ -16,6 +16,10 @@
        <td><%= t.description %></td>
        <td><%= link_to 'Show', task_path(t) %></td>
        <td><%= link_to 'Edit', edit_task_path(t) %></td>
+       <td><%= link_to 'Delete', task_path(t), 
+                        method: :delete, 
+                        data:{ confirm: 'Are you sure, homeslice?' } %></td>
+
 
      </tr>
   <% end %>

@@ -13,5 +13,8 @@
   <%= @task.description %>
 </p>
 
-<%= link_to 'edit', edit_task_path(@task) %>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'Delete', task_path, 
+             method: :delete,
+             data: { confirm: "You know what you doin?" } %>
 <%= link_to 'See all', tasks_path %>
