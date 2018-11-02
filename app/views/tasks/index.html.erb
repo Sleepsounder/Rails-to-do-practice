@@ -1,4 +1,4 @@
-<h1>Tasks#index</h1>
+<h1>Tasks</h1>
 <%= link_to 'New Task', new_task_path %>
 
 <table>
@@ -15,10 +15,10 @@
        <td><%= t.duty %></td>
        <td><%= t.description %></td>
        <td><%= link_to 'Show', task_path(t) %></td>
-       <td><%= link_to 'Edit', edit_task_path(t) %></td>
-       <td><%= link_to 'Delete', task_path(t), 
+       <td><%= link_to 'Change', edit_task_path(t) %></td>
+       <td><%= link_to 'Completed', task_path(t), 
                         method: :delete, 
-                        data:{ confirm: 'Are you sure, homeslice?' } %></td>
+                        data:{ confirm: 'Are you sure you finished, homeslice?' } %></td>
 
 
      </tr>

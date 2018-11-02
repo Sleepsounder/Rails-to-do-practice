@@ -1,3 +1,5 @@
+<h1>Task</h1>
+
 <p>
   <strong>Day:</strong>
   <%= @task.day %>
@@ -13,8 +15,15 @@
   <%= @task.description %>
 </p>
 
+<h2>Comments</h2>
+<%= render @task.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+
 <%= link_to 'Edit', edit_task_path(@task) %>
-<%= link_to 'Delete', task_path, 
+<%= link_to 'Delete Task', task_path, 
              method: :delete,
              data: { confirm: "You know what you doin?" } %>
 <%= link_to 'See all', tasks_path %>

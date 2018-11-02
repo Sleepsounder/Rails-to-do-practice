@@ -1,0 +1,13 @@
+<%= form_with model: [ @task, @task.comments.build ], local: true do |f| %>
+    <p>
+      <%= f.label :commentname %><br>
+      <%= f.text_field :commentname %>
+    </p>
+    <p>
+      <%= f.label :comment %><br>
+      <%= f.text_area :comment %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>    
