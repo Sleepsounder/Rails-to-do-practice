@@ -1,0 +1,25 @@
+<h1>Tasks#index</h1>
+<%= link_to 'New Task', new_task_path %>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Duty</th>
+    <th>Description</>
+    <th></th>
+  <tr>
+
+  <% @tasks.each do |t| %>
+     <tr>
+       <td><%= t.day %></td>
+       <td><%= t.duty %></td>
+       <td><%= t.description %></td>
+       <td><%= link_to 'Show', task_path(t) %></td>
+       <td><%= link_to 'Edit', edit_task_path(t) %></td>
+
+     </tr>
+  <% end %>
+</table>
+
+
+

@@ -1,0 +1,17 @@
+<p>
+  <strong>Day:</strong>
+  <%= @task.day %>
+</p>
+
+<p>
+  <strong>Duty:</strong>
+  <%= @task.duty %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<%= link_to 'edit', edit_task_path(@task) %>
+<%= link_to 'See all', tasks_path %>
